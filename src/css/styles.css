@@ -214,3 +214,36 @@ body{
         grid-template-columns: repeat(2,1fr);
     }
 }
+
+@media (max-width: 768px){
+    .header{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .cabecalho-nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .login{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner{
+        height: 150px;
+        margin: 10px;
+    }
+
+    .carrossel-item img{
+        width: 120px;
+        height: 160px;
+    }
+
+    .grade-conteudo{
+        grid-template-columns: 1fr;
+    }
+}
