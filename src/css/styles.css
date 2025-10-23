@@ -1,2 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header{
+    background-color: #d2b9f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 150px;
+    height: 80px;
+}
 
 
+
+.cabecalho-nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.cabecalho-nav a{
+    text-decoration: none;
+    color: #4a0072;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cabecalho-nav a:hover{
+    color: #7a1fa2;
+    text-decoration: underline;
+
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login input{
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 160px;
+}
+
+.login-btn{
+    background-color: transparent;
+    border: none;
+    color: #6a0dad;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login img{
+    cursor: pointer;
+}
+
+.banner{
+    background-color: #d9c9f7;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.banner-imagem{
+    flex: 1;
+    background-color: #ccc;
+    height: 100%;
+}
+
+.banner button{
+    background-color: #b28de3;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner button:hover{
+    background-color: #a16de0;
+}
+
+.sessao{
+    margin: 20px;
+}
+
+.sessao h2{
+    color: #4a0072;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    background-color: #d9c9f7;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.carrossel button{
+    background-color: #b28de3;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrossel button:hover{
+    background-color: #a16de0;
+}
+
+.carrossel-item{
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carrossel-item img{
+    width: 150px;
+    height: 210px;
+    border-radius: 6px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.carrossel-item img:hover{
+    transform: scale(1.05);
+}
+
+.grade{
+    background-color: #d9c9f7;
+    margin: 30px 200px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.grade-titulo h2{
+    color: #4a0072;
+    margin-bottom: 20px;
+}
+
+.grade-conteudo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.grade-conteudo .item{
+    background-color: #777;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.grade-conteudo .item:hover{
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #d2b9f3;
+    text-align: center;
+    padding: 15px;
+    color: #4a0072;
+    font-weight: 500;
+}
