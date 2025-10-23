@@ -198,3 +198,19 @@ body{
     color: #4a0072;
     font-weight: 500;
 }
+
+
+@media (max-width: 1024px) {
+    .cabecalho-nav ul{
+        gap: 15px;
+    }
+
+    .carrossel-item img{
+        width: 130px;
+        height: 180px;
+    }
+
+    .grade-conteudo{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
