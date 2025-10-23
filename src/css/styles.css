@@ -247,3 +247,23 @@ body{
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 480px){
+    .cabecalho-nav a{
+        font-size: 14px;
+    }
+
+    .banner button, .carrossel button{
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .carrossel-item img{
+        width: 100px;
+        height: 140px;
+    }
+
+    .footer p{
+        font-size: 14px;
+    }
+}
