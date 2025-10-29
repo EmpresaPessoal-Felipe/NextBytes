@@ -1,91 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;900&display=swap" rel="stylesheet">
     <title>NextBytes</title>
 </head>
+<header>
+    <nav>
+        <ul>
+            <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
+            <li class="menu-header"><a href="#" class="menu">Início</a></li>
+            <li class="menu-header"><a href="#" class="menu">Jogos</a></li>
+            <li class="menu-header"><a href="#" class="menu">Aplicativos</a></li>
+            <li class="menu-header"><a href="#" class="menu">Ofertas</a></li>
+            <li class="menu-header"><a href="#jgsdomes" class="menu">Sobre</a></li>
+            <input type="text" id="pesquisar" placeholder="Pesquisar...">
+            <div id="login">
+            <img width="50px" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="Login" id="img-login">
+            <p>Login</p>
+            </div>
+        </ul>
+    </nav>
+</header>
+
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="./src/assets/img/NextBytes.png" alt="NextBytes-logo">
-        </div>
-        <nav class="cabecalho-nav">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#jogos">Jogos</a></li>
-                <li><a href="#app">Aplicativos</a></li>
-                <li><a href="#populares">Populares</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
-        </nav>
-        <div class="login">
-            <input type="text" placeholder="Pesquisar...">
-            <button class="login-btn">Login</button>
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/>
-        </div>
-    </header>
 
-    <section class="banner">
-        <button class="btn-anterior"><</button>
-        <div class="banner-imagem">
-            <img src="" alt="jogo1">
-            <img src="" alt="jogo1">
-            <img src="" alt="jogo1">
-            <img src="" alt="jogo1">
-        </div>
-        <button class="btn-proximo">></button>
-    </section>
-
-    <section class="sessao" id="jogos">
-        <h2>Jogos de ação e aventura</h2>
-        <div class="carrossel">
-            <button class="btn-anterior"><</button>
-            <div class="carrossel-item">
-                <img src="" alt="jogo1">
-                <img src="" alt="jogo1">
-                <img src="" alt="jogo1">
-                <img src="" alt="jogo1">
-                <img src="" alt="jogo1">
+    <main>
+        <section id="banner">
+            <div id="banner-conteudo">
+                <button class="btn-ban btn-anterior-ban">&#10094;</button>
+                <button class="btn-ban btn-proximo-ban">&#10095;</button>
             </div>
-            <button class="btn-proximo">></button>
-        </div>
-    </section>
-    
-    <section class="sessao" id="app">
-        <h2>Aplicativos de edição</h2>
-    <div class="carrossel">
-            <button class="btn-anterior"><</button>
-            <div class="carrossel-item">
-                <img src="" alt="app1">
-                <img src="" alt="app1">
-                <img src="" alt="app1">
-                <img src="" alt="app1">
-                <img src="" alt="app1">
+        </section>
+        <section id="produtos-secao">
+            <h2 class="titulo-secao">Jogos de ação e aventura</h2>
+            <div class="grade-produtos">
+                <button class="btn-anterior-produtos btn-produtos">&#10094;</button>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                <button class="btn-proximo-produtos btn-produtos">&#10095;</button>
             </div>
-            <button class="btn-proximo">></button>
-        </div>
-    </section>
 
-    <section class="grade" id="populares">
-        <div class="grade-titulo">
+            <h2 class="titulo-secao" id="titulo-apps">Aplicativos de edição</h2>
+            <div class="grade-produtos" id="apps">
+                <button class="btn-anterior-produtos btn-produtos">&#10094;</button>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                    <div class="produto"></div>
+                <button class="btn-proximo-produtos btn-produtos">></button>
+            </div>
+        </section>
+
+    <section id="grade-populares">
+        <div id="grade-titulo">
             <h2>Mais populares</h2>
         </div>
-        <div class="grade-conteudo">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            
+        <div id="grade-conteudo">
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
+            <div class="produto-grade">
+                <div class="produto-grade-conteudo">
+                    <div class="decoration-grade">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
+                    <p class="preco-grade">R$279,99</p>
+                    <p class="ver-mais">Ver mais</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            </div>
         </div>
     </section>
 
