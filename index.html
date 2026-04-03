@@ -11,11 +11,8 @@
     <nav>
         <ul>
             <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
-            <li class="menu-header"><a href="#" class="menu">Início</a></li>
-            <li class="menu-header"><a href="#" class="menu">Jogos</a></li>
-            <li class="menu-header"><a href="#" class="menu">Aplicativos</a></li>
-            <li class="menu-header"><a href="#" class="menu">Ofertas</a></li>
-            <li class="menu-header"><a href="#jgsdomes" class="menu">Sobre</a></li>
+            <li class="menu-header"><a href="index.html" class="menu" id="inicio" style="font-weight: 650;">Início</a></li>
+            <li class="menu-header"><a href="jogos.html" class="menu" id="jogos">Jogos</a></li>
             <input type="text" id="pesquisar" placeholder="Pesquisar...">
             <div id="login">
             <img width="50px" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="Login" id="img-login">
@@ -27,147 +24,149 @@
 
 <body>
 
+    <!-- <div id="splash">
+        <img src="./src/assets/NextByteslogo.png" alt="Logo" id="logo-splash">
+    </div> -->
+
     <main>
-        <section id="banner">
-            <div id="banner-conteudo">
-                <button class="btn-ban btn-anterior-ban">&#10094;</button>
-                <button class="btn-ban btn-proximo-ban">&#10095;</button>
+        <section class="banner">
+            <div class="banner-conteudo">
             </div>
         </section>
         <section id="produtos-secao">
             <h2 class="titulo-secao">Jogos de ação e aventura</h2>
             <div class="grade-produtos">
                 <button class="btn-anterior-produtos btn-produtos">&#10094;</button>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
+                    <div class="produto" data-id="1"><div class="conteudo-produto"><h1 class="titulo-produto">Grand Theft Auto V</h1><p class="preco-produto">R$150,00</p></div></div>
+                    <div class="produto" data-id="2"><div class="conteudo-produto"><h1 class="titulo-produto">Red Dead Redemption 2</h1><p class="preco-produto">R$149,00</p></div></div>
+                    <div class="produto" data-id="3"><div class="conteudo-produto"><h1 class="titulo-produto">Forza Horizon 5</h1><p class="preco-produto">R$249,90</p></div></div>
+                    <div class="produto" data-id="4"><div class="conteudo-produto"><h1 class="titulo-produto">The Legend of Zelda</h1><p class="preco-produto">R$299,90</p></div></div>
+                    <div class="produto" data-id="5"><div class="conteudo-produto"><h1 class="titulo-produto">Counter Strike 2</h1><p class="preco-produto">Grátis</p></div></div>
                 <button class="btn-proximo-produtos btn-produtos">&#10095;</button>
             </div>
 
             <h2 class="titulo-secao" id="titulo-apps">Aplicativos de edição</h2>
             <div class="grade-produtos" id="apps">
                 <button class="btn-anterior-produtos btn-produtos">&#10094;</button>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
-                    <div class="produto"></div>
+                    <div class="produto" data-id="9"><div class="conteudo-produto"><h1 class="titulo-produto">Adobe Premiere Pro</h1><p class="preco-produto">R$89,90</p></div></div>
+                    <div class="produto" data-id="10"><div class="conteudo-produto"><h1 class="titulo-produto">Adobe Photoshop</h1><p class="preco-produto">R$89,90</p></div></div>
+                    <div class="produto" data-id="11"><div class="conteudo-produto"><h1 class="titulo-produto">Davinci Resolve</h1><p class="preco-produto">Grátis</p></div></div>
+                    <div class="produto" data-id="12"><div class="conteudo-produto"><h1 class="titulo-produto">CapCut</h1><p class="preco-produto">Grátis</p></div></div>
+                    <div class="produto" data-id="13"><div class="conteudo-produto"><h1 class="titulo-produto">FL Studio</h1><p class="preco-produto">R$399,90</p></div></div>
                 <button class="btn-proximo-produtos btn-produtos">></button>
             </div>
         </section>
 
-    <section id="grade-populares">
-        <div id="grade-titulo">
-            <h2>Mais populares</h2>
+    <section id="grades">
+        <section class="grade-solo">
+        <div class="grade-titulo">
+            <h2>Jogos mais populares</h2>
         </div>
-        <div id="grade-conteudo">
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
+        <div class="grade-conteudo">
+            <div class="produto-grade" data-id="2">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/rdr2logo.jpg">
+                    <h3 class="titulo-produto-grade">Red Dead Redemption</h3>
+                    <p class="preco-grade">R$149,90</p>
                     <button class="botao-compra">COMPRAR</button>
                 </div>
                 </div>
-            </div>
-            <div class="produto-grade">
+            
+            <div class="produto-grade" data-id="1">
                 <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
+                    <img src="./src/assets/gtav.jpg">
+                    <h3 class="titulo-produto-grade">Grand Theft Auto V</h3>
+                    <p class="preco-grade">R$150,00</p>
                     <button class="botao-compra">COMPRAR</button>
                 </div>
                 </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
+            
+            <div class="produto-grade"data-id="3">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/forzalogo.jpg">
+                    <h3 class="titulo-produto-grade">Forza Horizon 5</h3>
+                    <p class="preco-grade">R$249,90</p>
                     <button class="botao-compra">COMPRAR</button>
                 </div>
                 </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
+            
+            <div class="produto-grade"data-id="4">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/zeldalogo.jpg">
+                    <h3 class="titulo-produto-grade">The Legend of Zelda</h3>
+                    <p class="preco-grade">R$299,90</p>
                     <button class="botao-compra">COMPRAR</button>
                 </div>
                 </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
+            
+            <div class="produto-grade"data-id="5">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/cslogo.jpg">
+                    <h3 class="titulo-produto-grade">Counter Strike 2</h3>
+                    <p class="preco-grade" style="left: 8px;">Grátis</p>
                     <button class="botao-compra">COMPRAR</button>
                 </div>
                 </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
-                    <button class="botao-compra">COMPRAR</button>
-                </div>
-                </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
-                    <button class="botao-compra">COMPRAR</button>
-                </div>
-                </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
-                    <button class="botao-compra">COMPRAR</button>
-                </div>
-                </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
-                    <button class="botao-compra">COMPRAR</button>
-                </div>
-                </div>
-            </div>
-            <div class="produto-grade">
-                <div class="produto-grade-conteudo">
-                    <div class="decoration-grade">
-                    <h3 class="titulo-produto-grade">Red Dead Redemption 2</h3>
-                    <p class="preco-grade">R$279,99</p>
-                    <p class="ver-mais">Ver mais</p>
-                    <button class="botao-compra">COMPRAR</button>
-                </div>
-                </div>
-            </div>
         </div>
+        </section>
+        <section class="grade-solo">
+            <div class="grade-titulo">
+            <h2>Apps mais populares</h2>
+        </div>
+        <div class="grade-conteudo">
+            <div class="produto-grade"data-id="13">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/fllogo.jpg">
+                    <h3 class="titulo-produto-grade">FL Studio</h3>
+                    <p class="preco-grade">R$399,90</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            
+            <div class="produto-grade"data-id="14">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/canvalogo.jpg">
+                    <h3 class="titulo-produto-grade">Canva</h3>
+                    <p class="preco-grade" style="left: 8px;">Grátis</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            
+            <div class="produto-grade"data-id="15">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/blenderlogo.jpg">
+                    <h3 class="titulo-produto-grade">Blender</h3>
+                    <p class="preco-grade" style="left: 8px;">Grátis</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            
+            <div class="produto-grade"data-id="16">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/lightlogo.jpg">
+                    <h3 class="titulo-produto-grade">Litghworks</h3>
+                    <p class="preco-grade" style="left: 8px;">Grátis</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+            
+            <div class="produto-grade"data-id="9">
+                <div class="produto-grade-conteudo" >
+                    <img src="./src/assets/adbplogo.png">
+                    <h3 class="titulo-produto-grade">Adobe Premiere Pro</h3>
+                    <p class="preco-grade" style="left: 10px;">R$89,90/mês</p>
+                    <button class="botao-compra">COMPRAR</button>
+                </div>
+                </div>
+        </section>
     </section>
-
+</main>
     <footer class="footer">
-        <p>&copy; 2025 NextBytes- Todos os direitos reservados</p>
+        <p>© 2026 NextBytes. Todos os direitos reservados. Todas as marcas são propriedade dos seus respectivos donos nos EUA e em outros países.
+IVA incluso em todos os preços onde aplicável.</p>
+<img src="./src/assets/NextByteslogo.png" alt="Logo">
     </footer>
+
+    <script src="./src/js/script.js" ></script>
 </body>
 </html>
