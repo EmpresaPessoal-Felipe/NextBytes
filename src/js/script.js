@@ -398,7 +398,7 @@ gradeFiltro.addEventListener('click', (e) => {
     }
 });
 
-// Opcional: esconde se redimensionar para >1024px
+// Esconde se redimensionar para >1024px
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) {
         gradeFiltro.classList.remove('show');
