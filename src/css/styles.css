@@ -77,11 +77,12 @@ header {
     z-index: 1;
     font-family: var(--inter);
     font-style: italic;
+    height: 120px;
 }
 
 #logo {
     width: 200px;
-    left: -400px;
+    left: -700px;
     z-index: 2;
     position: absolute;
 }
@@ -89,6 +90,7 @@ header {
 header nav {
     justify-content: center;
     padding: 10px;
+    margin: 0 auto;
 }
 
 header nav ul {
@@ -107,6 +109,8 @@ header nav ul {
     transition: ease;
     font-family: var(--inter);
     font-weight: 300;
+    position: relative;
+    left: -120px;
 }
 
 .menu:hover {
@@ -121,7 +125,7 @@ header nav ul {
 .menu-header::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: -120px;
     bottom: 0;
     width: 0;
     height: 2px;
@@ -143,9 +147,9 @@ header nav ul {
     height: 35px;
     width: 225px;
     border: none;
-    position: relative;
+    position: absolute;
     font-size: 1rem;
-    right: -70px;
+    right: -340px;
     background-image: url(../assets/Lupaicone.png);
     background-repeat: no-repeat;
     background-position: 10px;
@@ -166,8 +170,8 @@ header nav ul {
     transform: scale(1.15);
 }
 #login{
-    position: relative;
-    right: -170px;
+    position: absolute;
+    right: -500px;
 }
 
 #login p{
@@ -213,17 +217,42 @@ header nav ul {
     z-index: 3;
     text-align: center;
     font-family: var(--inter);
+    text-transform: uppercase;
 }
 .banner-conteudo h2{
     padding-bottom: 10px;
-    font-size: 2rem;
-}
-.banner-conteudo h3{
     font-size: 3rem;
-    padding-bottom: 25px;
+    text-shadow: 0 0 50px #680078;
 }
 .banner-conteudo p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+.btn-ban {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    box-shadow: 0 0 50px var(--color3);
+    transition: transform 0.3s ease;
+    z-index: 2;
+    display: block;
+}
+.btn-ban:hover{
+    transform: scale(1.2);
+}
+
+.btn-anterior-ban {
+    left: 2.5%;
+}
+
+.btn-proximo-ban {
+    right: 2.5%;
 }
 
 #conteudo {
@@ -458,10 +487,14 @@ main {
     font-family: var(--inter);
     display: flex;
 }
+footer p{
+    padding: 20px;
+}
 
 footer img{
     width: 45px;
     position: relative;
+    height: 50px;
     left: 3.5%;
     top: 2.5%;
 }
@@ -500,6 +533,8 @@ footer img{
     border-radius: 5px;
     box-shadow: 0 0 10px#8600fb;
     transition: transform 0.3s ease;
+    height: 200px;
+    cursor: pointer;
 }
 .produtos-pesquisa img{
     width: 350px;
@@ -585,6 +620,9 @@ footer img{
     margin-bottom: 10px;
     font-size: 1.1rem;
 }
+#btn-filtro{
+    display: none;
+}
 
 /* Página dos Produtos */
 
@@ -616,7 +654,7 @@ footer img{
     position: absolute;
     border-radius: 5px;
     left: 40px;
-    top: 390px;
+    top: 380px;
     z-index: 99;
     box-shadow: 0 0 20px rgb(255, 255, 255, 0.5);
 }
@@ -635,8 +673,8 @@ footer img{
     position: absolute;
     width: 400px;
     height: 230px;
-    right: 50px;
-    top: 550px;
+    right: -550px;
+    top: 0;
     border-radius: 10px;
     box-shadow: 0 0 15px#260047;
 }
@@ -711,18 +749,32 @@ footer img{
 .prodm-pag-mjs{
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.carrossel-track{
+    display: flex;
+    transition: transform 0.5s ease;
+    flex-wrap: nowrap;
 }
 
 .produto-pag-mjs{
     background: #ffffff;
-    width: 300px;
-    margin: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    box-shadow: 0 0 15px #3c0075;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  width: 300px; /* seu tamanho padrão */
+  margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 15px #3c0075;
+  text-align: center;
+  cursor: pointer;
+  flex-shrink: 0; /* evita que encolha */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1; /* padrão normal */
+  border-radius: 10px;
+}
+.produto-pag-mjs.center {
+  transform: scale(1.2);
+  opacity: 1; /* destacado */
 }
 .produto-pag-mjs img{
     width: 300px;
@@ -760,31 +812,44 @@ footer img{
     box-shadow: 0 0 10px #732dff;
 }
 
-@media (max-width: 1024px) {
+@media (width <=1024px) {
+
+    html{
+        overflow-x: hidden;
+    }
 
     #logo{
         width: 150px;
         clip-path: inset(0 90px 0 0); 
-        left: -100px;
+        left: -120%;
     }
     header{
         height: 80px;
     }
     .banner{
+        width: 100%;
         height: 300px;
+        box-shadow: 0 -15px 20px -10px var(--color2), 0 15px 20px -10px var(--color2) ;
+    }
+    .banner-conteudo h2{
+        font-size: 2rem;
+    }
+    .btn-ban{
+        display: none;
     }
     #conteudo{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     #pesquisar{
-        width: 120px;
-        right: 0;
-        margin-left: 0px;
+        width: 55%;
+        left: 40%;
+        height: 60%;
     }
-    header nav{
-        margin-right: 120px;
+    #pesquisar::placeholder{
+        opacity: 0;
     }
     #login{
         display: none;
@@ -793,15 +858,21 @@ footer img{
         position: relative;
         height: 280px;
     }
+    .titulo-secao{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 1000;
+    }
 
     .produto {
         position: absolute;
-        left: 225px;
+        left: 50%;
         transform: translate(-50%);
         width: 40%;
-        height: 250px; 
+        height: 90%; 
         display: none;
         border-radius: 10px;
+        margin: 15px auto;
     }
     .conteudo-produto{
         height: 40%;
@@ -824,17 +895,19 @@ footer img{
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
+        display: block;
     }
     .btn-anterior-produtos{
-        left: 30px;
+        left: 10%;
     }
     .btn-proximo-produtos{
-        right: 30px;
+        right: 10%;
     }
     #grades{
         display: flex;
         flex-direction: column;
-        
+        width: 90%;
+        margin: 30px auto;
     }
     .grade-solo{
         width: 100%;
@@ -845,13 +918,15 @@ footer img{
     }
     .produto-grade img{
         width: 15%;
+        position: absolute;
+        left: -17.5%;
     }
     .preco-grade{
-        left: 10px;
+        left: 2.5%;
     }
     .botao-compra{
         position: absolute;
-        left: 245px;
+        left: 60%;
         top: 40px;
         width: 100px;
     }
@@ -864,11 +939,129 @@ footer img{
         padding-left: 50px;
     }
     footer img{
-        width: 100px;
+        width: 90px;
         height: 100px;
         margin: 0 auto;
         top: 50px;
+        position: relative;
+        left: -2.5%;
     }
-    
+
+    /* Página de Jogos */
+
+    .titulo-parte-produto{
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+
+    .grade-filtro-pesquisa {
+    display: none; /* padrão oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* ocupa toda a largura */
+    height: 100%; /* ocupa toda a altura da tela */
+    background-color: rgba(0, 0, 0, 0.8); /* fundo semitransparente */
+    z-index: 9999;
+    overflow-y: auto; /* permite rolagem se o conteúdo for maior que a tela */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.grade-filtro-pesquisa.show {
+    display: block;
+    opacity: 1;
+}
+.filtro-pesquisa {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 50px auto; /* centraliza horizontalmente */
+}
+
+#btn-filtro{
+    display: block;
+    position: absolute;
+    right: 0%;
+    background: #4900a8;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    bottom: 210px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: var(--inter);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grade-produtos-pesquisa{
+    width: 100%;
+}
+.produtos-pesquisa{
+    width: 80%;
+    height: 150px;
+}
+.produtos-pesquisa img{
+    width: 50%;
+}
+.titulo-produto-pesquisa{
+    font-size: 1.4rem;
+}
+.preco-produto-pesquisa{
+    font-size: 1.1rem;
+    left: 50%;
+    bottom: 10%;
+}
+
+/* Página de Produtos */
+
+#banner-conteudo-produto{
+    height: 300px;
+}
+#logo-pag{
+    top: 270px;
+    width: 90px;
+}
+#titulo-pag-produto{
+    top: 315px;
+    left: 142.5px;
+    font-size: 1.4rem;
+}
+
+#descricao-avaliacao{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}
+#avaliacao-pag{
+    position: absolute;
+    top: -30px;
+}
+    #descricao-pag{
+        width: 45%;
+        text-align: start;
+    }
+    .conteudo-pag-produto{
+        position: relative;
+        margin: auto;
+        left: -22.5%;
+        margin-top: 80px;
+    }
+    .produto-pag-mjs{
+        height: 320px;
+    }
+    .produto-pag-mjs img{
+        height: 150px;
+        width: 80%;
+        margin: 20px;
+    }
+
 
 }
