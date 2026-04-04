@@ -10,7 +10,7 @@ function aplicarFiltro() {
         .filter(cb => cb.checked)
         .map(cb => cb.value.toLowerCase());
 
-    const produtos = Array.from(document.querySelectorAll('.produtos-pesquisa'));
+    const produtos = Array.from(document.querySelectorAll('.produtos-pesquisa, .produto-pag-mjs'));
 
     produtos.forEach(prod => {
         const categorias = prod.dataset.categoria.trim().toLowerCase().split(/\s+/);
@@ -74,7 +74,7 @@ const produtos = {
         descricao: "Ao longo de mais de duas décadas, Counter-Strike definiu o padrão dos jogos competitivos, sendo moldado por milhões de jogadores ao redor do mundo. Agora, Counter-Strike 2 inaugura um novo capítulo com a maior evolução técnica da franquia. Desenvolvido com a engine Source 2, o jogo traz gráficos aprimorados, física mais realista e uma comunicação em rede mais precisa. Mantendo a jogabilidade clássica baseada em objetivos, o CS2 adiciona novidades como o modo Premier com novo sistema de ranking, tabelas de classificação globais, mapas atualizados, granadas de fumaça dinâmicas que impactam o gameplay e melhorias sonoras e visuais. Além disso, todos os itens de CS:GO continuam disponíveis, garantindo continuidade para os jogadores.",
         avaliacao: "⭐ 2.7/5 estrelas",
         banner: "./src/assets/csbanner.jpg",
-        logo: "./src/assets/csbanner.jpg"
+        logo: "./src/assets/cslogo.jpg"
     },
     6: {
         titulo: "EA Sports FC 26",
@@ -121,21 +121,21 @@ const produtos = {
         preco: "Grátis",
         descricao: "O DaVinci Resolve é um dos softwares de pós-produção mais completos do mercado, oferecendo edição de vídeo, correção de cor, efeitos visuais e áudio em uma única plataforma. Desenvolvido pela Blackmagic Design, ele permite um fluxo de trabalho integrado, eliminando a necessidade de trocar de programa durante o processo criativo. Reconhecido como padrão na indústria cinematográfica, destaca-se principalmente pela correção de cor avançada, com sistema baseado em nodes que permite ajustes extremamente precisos. O software também conta com ferramentas poderosas para edição, efeitos visuais e mixagem de áudio, além de recursos de inteligência artificial como rastreamento automático e isolamento de elementos. Otimizado para alto desempenho, funciona bem até em projetos pesados e ainda oferece uma versão gratuita muito completa, sendo uma excelente escolha tanto para iniciantes quanto para profissionais.",
         avaliacao: "⭐ 4/5 estrelas",
-        banner: "./src/assets/imagem_exemplo.jpg",
-        logo: "./src/assets/exemplo logo gta v.jpg"
+        banner: "./src/assets/dvlogo.jpg",
+        logo: "./src/assets/dvlogo.jpg"
     },
     12: {
         titulo: "CapCut",
         preco: "Grátis",
-        descricao: "Velho oeste com mundo aberto extremamente realista.",
-        avaliacao: "⭐ 5/5 estrelas",
+        descricao: "O CapCut, criado pela ByteDance, é um editor de vídeo muito popular voltado para criação rápida de conteúdo para redes sociais. Ele funciona em celular, desktop e navegador e combina facilidade de uso com ferramentas avançadas. O aplicativo oferece biblioteca grande de músicas, efeitos, filtros e modelos prontos que aceleram a produção de vídeos. A interface simples usa uma linha do tempo com suporte a várias camadas e animações com keyframes. Recursos de inteligência artificial automatizam tarefas como legendas, remoção de fundo, retoque facial, geração de roteiro e conversão de texto em voz. Também permite exportar vídeos em até 4K a 60 fps e usa modelo freemium, no qual a maioria das funções é gratuita e algumas ferramentas avançadas ficam na versão Pro.",
+        avaliacao: "⭐ 4.5/5 estrelas",
         banner: "./src/assets/caplogo.jpg",
         logo: "./src/assets/caplogo.jpg"
     },
     13: {
         titulo: "FL Studio",
         preco: "R$399,90",
-        descricao: "Velho oeste com mundo aberto extremamente realista.",
+        descricao: "O FL Studio, desenvolvido pela Image-Line, é uma estação de trabalho de áudio digital muito usada na produção de música eletrônica, hip-hop e trap. Conhecido antes como FruityLoops, ele evoluiu para um ambiente completo de criação musical. Seu fluxo de trabalho usa padrões e o Step Sequencer para montar batidas e melodias de forma rápida, que depois podem ser organizadas livremente na Playlist. O software inclui um Piano Roll considerado um dos mais completos da indústria, diversos sintetizadores e efeitos nativos, além de suporte a plugins externos. Recursos recentes incluem separação de stems e masterização automática com inteligência artificial. Um diferencial importante é a política de atualizações gratuitas para toda a vida, o que fortaleceu sua grande comunidade de produtores.",
         avaliacao: "⭐ 5/5 estrelas",
         banner: "./src/assets/fllogo.jpg",
         logo: "./src/assets/fllogo.jpg"
@@ -143,7 +143,7 @@ const produtos = {
     14: {
         titulo: "Canva",
         preco: "Grátis",
-        descricao: "Velho oeste com mundo aberto extremamente realista.",
+        descricao: "O Canva é uma plataforma de design gráfico online criada para facilitar a produção de conteúdo visual por qualquer pessoa. O sistema de arrastar e soltar elimina a complexidade de softwares profissionais e permite criar posts, apresentações, logotipos e vídeos rapidamente. A plataforma oferece milhões de templates prontos, além de fotos, ilustrações, fontes e elementos gráficos integrados. O recurso Kit de Marca ajuda empresas a manter identidade visual consistente salvando cores e logotipos. A suíte de inteligência artificial chamada Estúdio Mágico inclui ferramentas como geração de texto, edição automática de imagens, criação de imagens por descrição e redimensionamento de designs para diferentes formatos. O Canva também permite colaboração em tempo real e funciona em navegador, desktop e celular, com versão gratuita ampla e plano Pro com recursos extras.",
         avaliacao: "⭐ 4.9/5 estrelas",
         banner: "./src/assets/canvalogo.jpg",
         logo: "./src/assets/canvalogo.jpg"
@@ -151,7 +151,7 @@ const produtos = {
     15: {
         titulo: "Blender",
         preco: "Grátis",
-        descricao: "Velho oeste com mundo aberto extremamente realista.",
+        descricao: "O Blender é um software gratuito e de código aberto voltado para criação 3D profissional e cobre todo o processo de produção, incluindo modelagem, escultura, animação, simulação, renderização, composição e até edição de vídeo. Desenvolvido pela Blender Foundation e mantido por uma comunidade global, ele oferece ferramentas comparáveis às usadas na indústria. O programa possui dois motores de renderização principais: Eevee, que mostra resultados em tempo real, e Cycles, que produz imagens fotorrealistas com rastreamento de luz. Recursos como Grease Pencil permitem misturar animação 2D dentro de ambientes 3D, enquanto Geometry Nodes cria sistemas procedurais para gerar cenários complexos automaticamente. Por ser gratuito e compatível com padrões profissionais, o Blender permite que artistas criem projetos para cinema, jogos, visualização arquitetônica e impressão 3D sem custo de licença.",
         avaliacao: "⭐ 4.3/5 estrelas",
         banner: "./src/assets/blenderlogo.jpg",
         logo: "./src/assets/blenderlogo.jpg"
@@ -159,7 +159,7 @@ const produtos = {
     16: {
         titulo: "Lightworks",
         preco: "Grátis",
-        descricao: "Velho oeste com mundo aberto extremamente realista.",
+        descricao: "O Lightworks é um editor de vídeo profissional usado há décadas na indústria cinematográfica e desenvolvido pela LWKS Software Ltd. Ele se destaca pelo fluxo de trabalho focado na velocidade de corte e na organização eficiente de grandes volumes de material. A interface prioriza precisão na edição, com ferramentas de trimming rápidas e um sistema avançado de gerenciamento de mídia que facilita trabalhar em projetos longos. O software suporta muitos formatos de vídeo nativamente e inclui correção de cor, efeitos em tempo real e aceleração por GPU para reprodução fluida. Também oferece colaboração entre vários editores no mesmo projeto. Existe uma versão gratuita com as principais ferramentas de edição, limitada a exportação em 720p, enquanto a versão Pro libera recursos completos de exportação e produção profissional.",
         avaliacao: "⭐ 4.1/5 estrelas",
         banner: "./src/assets/lightlogo.jpg",
         logo: "./src/assets/lightlogo.jpg"
@@ -171,7 +171,7 @@ const produtos = {
 
 // REDIRECIONAMENTO (HOME)
 
-document.querySelectorAll('.produto, .produto-grade').forEach(produto => {
+document.querySelectorAll('.produto, .produto-grade, .produto-pag-mjs, .produtos-pesquisa').forEach(produto => {
     produto.addEventListener('click', () => {
         const id = produto.getAttribute('data-id');
         if (id) {
@@ -184,7 +184,7 @@ document.querySelectorAll('.produto, .produto-grade').forEach(produto => {
 
 // BOTÃO COMPRAR
 
-document.querySelectorAll('.botao-compra').forEach(botao => {
+document.querySelectorAll('.botao-compra, .compra-pag-mjs').forEach(botao => {
   botao.addEventListener('click', (e) => {
     const produto = botao.closest('.produto-grade');
     const id = produto.getAttribute('data-id');
@@ -252,7 +252,7 @@ if (pagina.includes("index.html") || pagina === "/" || pagina.endsWith("/")) {
     16: "./src/assets/lightlogo.jpg"
   };
 
-  document.querySelectorAll('.produto, .produto-grade').forEach(produto => {
+  document.querySelectorAll('.produto, .produto-grade, .produtos-pesquisa').forEach(produto => {
     const id = produto.getAttribute('data-id');
 
     if (id && produtosHome[id]) {
@@ -309,3 +309,99 @@ carrosseis.forEach(carrossel => {
         }
     });
 });
+
+// Banner do site
+
+const bannerItems = [
+    {
+        imagem: "./src/assets/gtalogo.jpg",
+        titulo: "Grand Theft Auto V",
+        preco: "R$150,00"
+    },
+    {
+        imagem: "./src/assets/fllogo.jpg",
+        titulo: "FL Studio",
+        preco: "R$399,90"
+    },
+    {
+        imagem: "./src/assets/zeldabanner.jpg",
+        titulo: "The Legend of Zelda",
+        preco: "R$299,90"
+    }
+];
+
+let bannerIndex = 0;
+
+const banner = document.getElementById('banner');
+const tituloBanner = document.querySelector('.banner-titulo');
+const precoBanner = document.querySelector('.banner-preco');
+const btnProximoBanner = document.querySelector('.btn-proximo-ban');
+const btnAnteriorBanner = document.querySelector('.btn-anterior-ban');
+
+let bannerInterval;
+
+function atualizarBanner() {
+    banner.style.backgroundImage = `url('${bannerItems[bannerIndex].imagem}')`;
+    tituloBanner.textContent = bannerItems[bannerIndex].titulo;
+    precoBanner.textContent = bannerItems[bannerIndex].preco;
+}
+
+function iniciarBannerAutomatico() {
+    if (window.innerWidth <= 1024) {
+        bannerInterval = setInterval(() => {
+            bannerIndex = (bannerIndex + 1) % bannerItems.length;
+            atualizarBanner();
+        }, 5000);
+    }
+}
+
+function pararBannerAutomatico() {
+    clearInterval(bannerInterval);
+}
+
+atualizarBanner();
+iniciarBannerAutomatico();
+
+btnProximoBanner.addEventListener('click', () => {
+    pararBannerAutomatico();
+    bannerIndex = (bannerIndex + 1) % bannerItems.length;
+    atualizarBanner();
+    iniciarBannerAutomatico();
+});
+
+btnAnteriorBanner.addEventListener('click', () => {
+    pararBannerAutomatico();
+    bannerIndex = (bannerIndex - 1 + bannerItems.length) % bannerItems.length;
+    atualizarBanner();
+    iniciarBannerAutomatico();
+});
+
+window.addEventListener('resize', () => {
+    pararBannerAutomatico();
+    iniciarBannerAutomatico();
+});
+
+// Filtros na página de jogos
+const btnFiltro = document.getElementById('btn-filtro');
+const gradeFiltro = document.querySelector('.grade-filtro-pesquisa');
+
+btnFiltro.addEventListener('click', () => {
+    if (window.innerWidth <= 1024) {
+        gradeFiltro.classList.toggle('show');
+    }
+});
+
+// Fecha o overlay clicando fora do conteúdo
+gradeFiltro.addEventListener('click', (e) => {
+    if (e.target === gradeFiltro) {
+        gradeFiltro.classList.remove('show');
+    }
+});
+
+// Opcional: esconde se redimensionar para >1024px
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+        gradeFiltro.classList.remove('show');
+    }
+});
+
