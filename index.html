@@ -5,36 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./src/assets/NextByteslogo.png">
     <title>NextBytes</title>
 </head>
-<header>
-    <nav>
-        <ul>
-            <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
-            <li class="menu-header"><a href="index.html" class="menu" id="inicio" style="font-weight: 650;">Início</a></li>
-            <li class="menu-header"><a href="jogos.html" class="menu" id="jogos">Jogos</a></li>
-            <input type="text" id="pesquisar" placeholder="Pesquisar...">
-            <div id="login">
-            <img width="50px" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="Login" id="img-login">
-            <p>Login</p>
-            </div>
-        </ul>
-    </nav>
-</header>
 
 <body>
 
-    <!-- <div id="splash">
+    <header>
+     <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
+    <nav>
+        <ul class="menu-header">
+            <li><a href="./login.html" class="menu"><p>Login</p></a></li>
+            <li><a href="./index.html" class="menu" id="inicio" style="font-weight: 650;"><p>Início</p></a></li>
+            <li><a href="./jogos.html" class="menu" id="jogos"><p>Jogos</p></a></li>
+        </ul>
+    </nav>
+    <input type="text" id="pesquisar" placeholder="Pesquisar...">
+    <div class="hamburguer">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </div>
+
+</header>
+
+    <div id="splash">
         <img src="./src/assets/NextByteslogo.png" alt="Logo" id="logo-splash">
-    </div> -->
+    </div>
 
     <main>
         <section class="banner" id="banner">
     <button class="btn-ban btn-proximo-ban">&#10095;</button>
-
     <div class="banner-conteudo">
+        <a href="" class="a-banner">
         <h2 class="banner-titulo"></h2>
         <p class="banner-preco"></p>
+        </a>
     </div>
 
     <button class="btn-ban btn-anterior-ban">&#10094;</button>
@@ -168,8 +174,7 @@
     </section>
 </main>
     <footer class="footer">
-        <p>© 2026 NextBytes. Todos os direitos reservados. Todas as marcas são propriedade dos seus respectivos donos nos EUA e em outros países.
-IVA incluso em todos os preços onde aplicável.</p>
+        <p>© 2026 NextBytes. Todos os direitos reservados.</p>
 <img src="./src/assets/NextByteslogo.png" alt="Logo">
     </footer>
 

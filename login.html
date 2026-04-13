@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="icon" href="./src/assets/NextByteslogo.png">
+    <title>NextBytes</title>
+</head>
+
+<body>
+    <header>
+     <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
+    <nav>
+        <ul class="menu-header">
+            <li><a href="./login.html" class="menu" style="font-weight: 650;"><p>Login</p></a></li>
+            <li><a href="./index.html" class="menu" id="inicio"><p>Início</p></a></li>
+            <li><a href="./jogos.html" class="menu" id="jogos"><p>Jogos</p></a></li>
+        </ul>
+    </nav>
+    <input type="text" id="pesquisar" placeholder="Pesquisar..." >
+    <div class="hamburguer">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </div>
+
+</header>    
+    <main>
+        <section id="sec-login">
+            <section id="login-part">
+            <h1 class="titulo-login">Login</h1>
+
+            <div class="input-box">
+                <input type="text" class="input-login" placeholder="">
+            <p class="p-login">Email</p>
+            </div>
+
+            <div class="input-box">
+                <input type="password" class="input-login-pas" placeholder="">
+                <p class="p-login">Senha</p>
+                <button type="button" class="btn-spy">
+                    <img src="./src/assets/mostrarsenha.png" alt="">
+                </button>
+            </div>
+            <button class="login-button">Login</button>
+            </section>
+
+            <section id="sign-part">
+            <h1 class="titulo-login">Cadastro</h1>
+
+            <div class="input-box">
+                <input type="text" class="input-sign" placeholder="">
+            <p class="p-sign">Email</p>
+            </div>
+
+            <div class="input-box">
+                <input type="password" class="input-sign-pas" placeholder="">
+                <p class="p-sign">Senha</p>
+                <button type="button" class="btn-spy">
+                    <img src="./src/assets/mostrarsenha.png" alt="">
+                </button>
+            </div>
+            <button class="sign-button">Cadastre-se</button>
+            </section>
+
+            <div id="welcome">
+                <h1 id="titulo-welcome">Bem-vindo!</h1>
+                <p id="p-welcome">Não tem uma conta ou não fez login ainda?</p>
+                <button id="button-2way" onclick="alternarLogin()">CLIQUE AQUI</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2026 NextBytes. Todos os direitos reservados.</p>
+<img src="./src/assets/NextByteslogo.png" alt="Logo">
+    </footer>
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
