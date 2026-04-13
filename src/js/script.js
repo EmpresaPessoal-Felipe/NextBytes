@@ -265,7 +265,7 @@ if (pagina.includes("index.html") || pagina === "/" || pagina.endsWith("/")) {
 
 }
 
-// Carrossel funcional produtos index.html
+// Carrossel produtos index.html
 
 const carrosseis = document.querySelectorAll('.grade-produtos');
 
@@ -312,21 +312,29 @@ carrosseis.forEach(carrossel => {
 
 // Banner do site
 
+const paginaAtual = window.location.pathname;
+const paginasComBanner = ["index.html", "jogos.html", "produto.html", "/"];
+
+if (paginasComBanner.some(pagina => paginaAtual.includes(pagina))) {
+
 const bannerItems = [
     {
         imagem: "./src/assets/gtalogo.jpg",
         titulo: "Grand Theft Auto V",
-        preco: "R$150,00"
+        preco: "R$150,00",
+        link: "produto.html?id=1"
     },
     {
         imagem: "./src/assets/fllogo.jpg",
         titulo: "FL Studio",
-        preco: "R$399,90"
+        preco: "R$399,90",
+        link: "produto.html?id=13"
     },
     {
         imagem: "./src/assets/zeldabanner.jpg",
         titulo: "The Legend of Zelda",
-        preco: "R$299,90"
+        preco: "R$299,90",
+        link: "produto.html?id=4"
     }
 ];
 
@@ -335,15 +343,18 @@ let bannerIndex = 0;
 const banner = document.getElementById('banner');
 const tituloBanner = document.querySelector('.banner-titulo');
 const precoBanner = document.querySelector('.banner-preco');
+const linkBanner = document.querySelector('.a-banner')
 const btnProximoBanner = document.querySelector('.btn-proximo-ban');
 const btnAnteriorBanner = document.querySelector('.btn-anterior-ban');
 
 let bannerInterval;
 
 function atualizarBanner() {
+    if (!banner) return; 
     banner.style.backgroundImage = `url('${bannerItems[bannerIndex].imagem}')`;
     tituloBanner.textContent = bannerItems[bannerIndex].titulo;
     precoBanner.textContent = bannerItems[bannerIndex].preco;
+    linkBanner.href = bannerItems[bannerIndex].link;
 }
 
 function iniciarBannerAutomatico() {
@@ -362,46 +373,217 @@ function pararBannerAutomatico() {
 atualizarBanner();
 iniciarBannerAutomatico();
 
-btnProximoBanner.addEventListener('click', () => {
+btnProximoBanner?.addEventListener('click', () => {
     pararBannerAutomatico();
     bannerIndex = (bannerIndex + 1) % bannerItems.length;
     atualizarBanner();
     iniciarBannerAutomatico();
 });
 
-btnAnteriorBanner.addEventListener('click', () => {
+btnAnteriorBanner?.addEventListener('click', () => {
     pararBannerAutomatico();
     bannerIndex = (bannerIndex - 1 + bannerItems.length) % bannerItems.length;
     atualizarBanner();
     iniciarBannerAutomatico();
 });
 
-window.addEventListener('resize', () => {
+window?.addEventListener('resize', () => {
     pararBannerAutomatico();
     iniciarBannerAutomatico();
 });
+
+
 
 // Filtros na página de jogos
 const btnFiltro = document.getElementById('btn-filtro');
 const gradeFiltro = document.querySelector('.grade-filtro-pesquisa');
 
-btnFiltro.addEventListener('click', () => {
+btnFiltro?.addEventListener('click', () => {
     if (window.innerWidth <= 1024) {
         gradeFiltro.classList.toggle('show');
     }
 });
 
 // Fecha o overlay clicando fora do conteúdo
-gradeFiltro.addEventListener('click', (e) => {
+gradeFiltro?.addEventListener('click', (e) => {
     if (e.target === gradeFiltro) {
-        gradeFiltro.classList.remove('show');
+        gradeFiltro?.classList.remove('show');
     }
 });
 
 // Esconde se redimensionar para >1024px
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) {
-        gradeFiltro.classList.remove('show');
+        gradeFiltro?.classList.remove('show');
+    }
+});
+}
+
+// Senha alterar entre password e text na página de login
+const botoesSpy = document.querySelectorAll('.btn-spy');
+
+botoesSpy.forEach(botao => {
+  botao.addEventListener('click', function() {
+    const campoSenha = this.parentElement.querySelector('input');
+
+    if (campoSenha.type === 'password') {
+      campoSenha.type = 'text';
+    } else {
+      campoSenha.type = 'password';
+    }
+  });
+});
+
+// Verificando email e fazendo um "login"
+
+const botoesLogin = document.querySelectorAll('.login-button');
+
+botoesLogin.forEach(botao => {
+    botao.addEventListener('click', function() {
+        // Busca o campo de e-mail e senha relativos ao botão clicado
+        const caixaPai = this.closest('section') || this.parentElement;
+        const inputEmail = caixaPai.querySelector('.input-login');
+        const inputSenha = caixaPai.querySelector('.input-login-pas');
+
+        
+        const email = inputEmail.value;
+        const senha = inputSenha.value
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regex.test(email)) {
+            alert("E-mail inválido!");
+        } else if (senha === "") {
+            alert("A senha é obrigatória!");
+        } else {
+            alert("Login realizado com sucesso!");
+        }
+    });
+});
+
+
+// Realizando cadastro
+
+const botoesCadastro = document.querySelectorAll('.sign-button');
+
+botoesCadastro.forEach(botao => {
+    botao.addEventListener('click', function() {
+        // Busca o campo de e-mail e senha relativos ao botão clicado
+        const caixaPai = this.closest('section') || this.parentElement;
+        const inputEmail = caixaPai.querySelector('.input-sign');
+        const inputSenha = caixaPai.querySelector('.input-sign-pas');
+        
+        const email = inputEmail.value;
+        const senha = inputSenha.value
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regex.test(email)) {
+            alert("E-mail inválido!");
+        } else if (senha === "") {
+            alert("A senha é obrigatória!");
+        } else {
+            alert("Cadastro realizado com sucesso!");
+        }
+    });
+});
+
+// Mudar a posição do "welcome"
+
+const botao = document.getElementById('button-2way');
+const div = document.getElementById('welcome');
+
+if (window.innerWidth > 1024)
+
+botao?.addEventListener('click', function() {
+
+    div.classList.toggle('ativa');
+});
+
+// Pesquisa por jogos
+const inputPesquisa = document.getElementById('pesquisar');
+
+inputPesquisa?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const termo = inputPesquisa.value.trim();
+
+        if (termo !== "") {
+            window.location.href = `jogos.html?busca=${encodeURIComponent(termo)}`;
+        }
+    }
+});
+function aplicarPesquisa() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const termo = urlParams.get('busca')?.toLowerCase();
+    const container = document.querySelector('.grade-produtos-pesquisa');
+    
+    if (!termo || !container) return;
+
+    if (inputPesquisa) inputPesquisa.value = termo;
+
+    const produtos = Array.from(document.querySelectorAll('.produtos-pesquisa, .produto-pag-mjs'));
+
+    produtos.forEach(prod => {
+        const titulo = prod.querySelector('.titulo-produto-pesquisa')?.innerText.toLowerCase() || "";
+        
+        const corresponde = titulo.includes(termo);
+        
+        prod.style.opacity = corresponde ? '1' : '0';
+        prod.style.pointerEvents = corresponde ? 'auto' : 'none';
+    });
+
+    const produtosSelecionados = produtos.filter(prod => prod.style.opacity === '1');
+    const produtosNaoSelecionados = produtos.filter(prod => prod.style.opacity === '0');
+
+    container.innerHTML = '';
+    produtosSelecionados.forEach(prod => container.appendChild(prod));
+    produtosNaoSelecionados.forEach(prod => container.appendChild(prod));
+}
+
+
+window.addEventListener('DOMContentLoaded', aplicarPesquisa);
+
+// Perguntar sobre a senha ao comprar
+function perguntarSenha() {
+let senha = prompt("Digite a senha para comprar:")
+if (senha === "admin"){
+    alert("Compra realizada com sucesso! ©NextBytes")
+}
+else{
+    alert("Pedido de compra negado.")
+}
+}
+
+// Adicionar produto a um carrinho fictício
+function addCarrinho(){
+    alert("Produto adicionado ao carrinho de compras!")
+}
+// Menu Hamburguer
+const hamburguer = document.querySelector('.hamburguer');
+const headerMenu = document.querySelector('.menu-header');
+
+function toggleMenu() {
+    hamburguer.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+}
+
+hamburguer.addEventListener('click', toggleMenu);
+headerMenu.addEventListener('click', (event) => {
+    if (event.target.classList.contains('item-menu')) {
+        toggleMenu();
     }
 });
 
+// Alternar entre login e cadastro no mobile
+function alternarLogin() {
+  if (window.innerWidth <= 1024) {
+    
+    const ids = ['login-part', 'sign-part'];
+    
+    ids.forEach(id => {
+      const partsLogin = document.getElementById(id);
+      if (partsLogin) { // Verifica se o elemento existe na página
+        partsLogin.classList.toggle('active');
+      }
+    });
+
+  }
+}

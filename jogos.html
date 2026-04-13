@@ -5,33 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="icon" href="./src/assets/NextByteslogo.png">
     <title>NextBytes</title>
 </head>
-<header>
-    <nav>
-        <ul>
-            <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
-            <li class="menu-header"><a href="index.html" class="menu" id="inicio">Início</a></li>
-            <li class="menu-header"><a href="jogos.html" class="menu" id="jogos" style="font-weight: 650;">Jogos</a></li>
-            <input type="text" id="pesquisar" placeholder="Pesquisar...">
-            <div id="login">
-            <img width="50px" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="Login" id="img-login">
-            <p>Login</p>
-            </div>
-        </ul>
-    </nav>
-</header>
+
 
 <body>
+<header>
+     <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
+    <nav>
+        <ul class="menu-header">
+            <li><a href="./login.html" class="menu"><p>Login</p></a></li>
+            <li><a href="./index.html" class="menu" id="inicio"><p>Início</p></a></li>
+            <li><a href="./jogos.html" class="menu" id="jogos" style="font-weight: 650;"><p>Jogos</p></a></li>
+        </ul>
+    </nav>
+    <input type="text" id="pesquisar" placeholder="Pesquisar...">
+    <div class="hamburguer">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </div>
 
+</header>
     
     <main>
         <section class="banner" id="banner">
     <button class="btn-ban btn-proximo-ban">&#10095;</button>
-
     <div class="banner-conteudo">
+        <a href="" class="a-banner">
         <h2 class="banner-titulo"></h2>
         <p class="banner-preco"></p>
+        </a>
     </div>
 
     <button class="btn-ban btn-anterior-ban">&#10094;</button>
@@ -40,6 +45,7 @@
         <h1 class="titulo-parte-produto">Jogos</h1>
 
         <section class="conteudo-pesquisa">
+            <button id="btn-filtro">Filtros</button>
             <section class="grade-produtos-pesquisa">
             <div class="produtos-pesquisa" data-categoria=" acao" data-id="8">
                 <img src="./src/assets/dmclogo.jpg" alt="Jogos">
@@ -63,7 +69,7 @@
             </div>
             <div class="produtos-pesquisa" data-categoria="acao aventura desconto" data-id="1">
                 <img src="./src/assets/gtalogo.jpg" alt="Jogos">
-                <h1 class="titulo-produto-pesquisa" >Grand Theft Auto</h1>
+                <h1 class="titulo-produto-pesquisa" >Grand Theft Auto V</h1>
                 <p class="preco-produto-pesquisa">R$119,90</p>
             </div>
             <div class="produtos-pesquisa" data-categoria="tiro acao" data-id="5">
@@ -82,7 +88,6 @@
                 <p class="preco-produto-pesquisa">R$129,90</p>
             </div>
             </section>
-            <button id="btn-filtro">Filtros</button>
             <section class="grade-filtro-pesquisa">
                 <div class="filtro-pesquisa">
                 <h1>Filtros</h1>
@@ -138,9 +143,8 @@
         
     </main>
     <footer class="footer">
-        <p>© 2026 NextBytes. Todos os direitos reservados. Todas as marcas são propriedade dos seus respectivos donos nos EUA e em outros países.
-IVA incluso em todos os preços onde aplicável.</p>
-<img src="./src/assets/NextByteslogo.png" alt="Logo">
+        <p>© 2026 NextBytes. Todos os direitos reservados.</p>
+            <img src="./src/assets/NextByteslogo.png" alt="Logo">
     </footer>
     <script src="./src/js/script.js"></script>
 </body>
