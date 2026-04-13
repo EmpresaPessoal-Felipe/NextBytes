@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="icon" href="./src/assets/NextByteslogo.png">
     <title>NextBytes</title>
 </head>
-<header>
-    <nav>
-        <ul>
-            <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
-            <li class="menu-header"><a href="index.html" class="menu" id="inicio">Início</a></li>
-            <li class="menu-header"><a href="jogos.html" class="menu" id="jogos">Jogos</a></li>
-            <input type="text" id="pesquisar" placeholder="Pesquisar...">
-            <div id="login">
-            <img width="50px" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="Login" id="img-login">
-            <p>Login</p>
-            </div>
-        </ul>
-    </nav>
-</header>
+
 
 <body>
+    <header>
+     <img src="./src/assets/NextBytes.png" alt="logo" id="logo">
+    <nav>
+        <ul class="menu-header">
+            <li><a href="./login.html" class="menu"><p>Login</p></a></li>
+            <li><a href="./index.html" class="menu" id="inicio"><p>Início</p></a></li>
+            <li><a href="./jogos.html" class="menu" id="jogos"><p>Jogos</p></a></li>
+        </ul>
+    </nav>
+    <input type="text" id="pesquisar" placeholder="Pesquisar...">
+    <div class="hamburguer">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </div>
+
+</header>
 
     <section id="banner-produto">
             <div id="banner-conteudo-produto">
@@ -40,8 +45,8 @@
             <section class="conteudo-pag-produto">
             <div class="secao-compra">
                 <h2 id="preco-pag">R$150,00</h2>
-                <button class="comprar-agora">Comprar agora</button>
-                <button class="add-carrinho">Adicionar ao carrinho</button>
+                <button class="comprar-agora" onclick="perguntarSenha()">Comprar agora</button>
+                <button class="add-carrinho" onclick="addCarrinho()">Adicionar ao carrinho</button>
             </div>
         </section>
             <p id="descricao-pag">Explore Los Santos em um mundo aberto cheio de ação e liberdade. Jogue com três protagonistas, complete missões variadas ou crie sua própria história. Com modo online e inúmeras atividades, GTA V oferece diversão praticamente infinita.</p>
@@ -92,8 +97,7 @@
         
     </main>
     <footer class="footer">
-        <p>© 2026 NextBytes. Todos os direitos reservados. Todas as marcas são propriedade dos seus respectivos donos nos EUA e em outros países.
-IVA incluso em todos os preços onde aplicável.</p>
+        <p>© 2026 NextBytes. Todos os direitos reservados.</p>
 <img src="./src/assets/NextByteslogo.png" alt="Logo">
     </footer>
     <script src="./src/js/script.js"></script>
