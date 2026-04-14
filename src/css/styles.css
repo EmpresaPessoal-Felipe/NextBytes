@@ -105,6 +105,7 @@ header nav ul {
     position: relative;
     left: 0;
     width: 80vw;
+    height: 100%;
 }
 
 .menu {
@@ -129,16 +130,17 @@ header nav ul {
 .menu::after {
     content: '';
     position: absolute;
-    left: -120px;
-    bottom: 0;
+    left: -30px;
+    bottom: 45%;
     width: 0;
     height: 2px;
     background: var(--color2);
+
 }
 
 .menu:hover::after {
     transition: width 0.5s ease;
-    width: 100%;
+    width: 70%;
 }
 
 .menu:hover {
@@ -265,6 +267,8 @@ header nav ul {
 
 main {
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 .titulo-secao{
     color: var(--color2);
@@ -485,6 +489,9 @@ main {
 } */
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #d2b9f3;
     color: #4a0072;
     font-weight: 500;
@@ -503,32 +510,6 @@ footer img{
     right: 70%;
 }
 
-#sobre{
-    display: flex;
-    font-family: var(--inter);
-    padding-top: 10px;
-    padding-bottom: 80px;
-
-}
-#titulo-historia{
-    position: relative;
-    left: 90px;
-    font-size: 2.2rem;
-    color: #4900a8;
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 20px;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #4900a8;
-}
-#sobre p{
-    position: relative;
-    color: var(--color2);
-    font-size: 1.6rem;
-    top: 150px;
-    padding: 15px;
-    margin-bottom: 300px;
-}
 
 
 /* Página de Jogos e Apps */
@@ -971,6 +952,114 @@ footer img{
     cursor: pointer;
 }
 
+/* Página do "Sobre" NextBytes */
+
+
+#sobre{
+    display: flex;
+    font-family: var(--inter);
+    padding-top: 10px;
+    padding-bottom: 250px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+}
+#titulo-historia{
+    position: absolute;
+    left: 40vw;
+    font-size: 2.2rem;
+    color: #4900a8;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #4900a8;
+    margin: 40px;
+    top: 100px;
+}
+#sobre p{
+    position: relative;
+    color: var(--color2);
+    font-size: 1.6rem;
+    top: 125px;
+    text-align: center;
+    padding: 20px 50px 0px 50px;
+}
+#nomes{
+    padding-top: 50px;
+}
+
+#mencao-cidade{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 120px;
+}
+#mencao-cidade h1{
+    animation: titulomencao 3.5s infinite ease-out;
+    text-align: center;
+    font-family: var(--inter);
+    padding-bottom: 50px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.7rem;
+}
+#mencao-cidade img{
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 10%;
+    animation: mudarshadowCidade 3s infinite ease-in-out;
+
+}
+
+#mencao-cidade span{
+    animation: mudarshadowSpan 3s infinite ease-in-out;
+}
+
+@keyframes titulomencao{
+    0%{
+        text-shadow: 0 0 15px #5E17EB;
+        color: #9d6dff;
+    }
+    50%{
+        text-shadow: 0 0 15px #5E17EB;
+        color: #5E17EB;
+    }
+    100%{
+        text-shadow: 0 0 15px #5E17EB;
+        color: #9d6dff;
+    }
+}
+
+@keyframes mudarshadowCidade {
+    0%{
+        box-shadow: 0 0 30px 5px #0084a5;
+    }
+    50%{
+        box-shadow: 0 0 30px 5px #002855;
+    }
+    100%{
+        box-shadow: 0 0 30px 5px #0084a5;
+    }
+}
+
+@keyframes mudarshadowSpan{
+    0%{
+        text-shadow: 0 0 15px #1749eb;
+        color: #5f84ff;
+    }
+    50%{
+        text-shadow: 0 0 15px #1749eb;
+        color: #1749eb;
+    }
+    100%{
+        text-shadow: 0 0 15px #1749eb;
+        color: #5f84ff;
+    }
+}
 
 
 @media (width <=1024px) {
@@ -1016,15 +1105,6 @@ footer img{
     #pesquisar::placeholder{
         opacity: 0;
     }
-    #img-login{
-        display: none;
-    }
-    #login p{
-    display: block;
-    position: absolute;
-    margin: 0 auto;
-
-    }
     .menu-header {
     display: none; 
     position: fixed;
@@ -1054,12 +1134,13 @@ footer img{
     }
     .menu::after{
         left: 20px;
+        bottom: 0;
     }
     
     .menu p{
         margin: 0;
     }
-        .hamburguer {
+    .hamburguer {
         display: block;
         right: 20px;
         position: absolute;
@@ -1155,25 +1236,7 @@ footer img{
         top: 40px;
         width: 100px;
     }
-    #sobre{
-        display: block;
-        width: 100vw;
-    }
-    #sobre p{
-        margin: 0 auto;
-        font-size: 1.3rem;
-        display: flex;
-        width: 400px;
-        flex-wrap: wrap;
-        top: 45px;
-        padding-bottom: 100px ;
-        text-align: justify;
-    }
-    #titulo-historia{
-        text-align: center;
-        left: 0;
-        right: 0;
-    }
+
     .footer{
         height: 130px;
         display: flex;
@@ -1320,11 +1383,14 @@ footer img{
         width: 80%;
         margin: 15px;
     }
+
     /* Pagina de login e cadastro */
+
     #sec-login{
         width: 80vw;
         padding: 10px;
         padding-top: 30px;
+        margin-bottom: 200px;
     }
     #login-part{
         opacity: 1;
@@ -1343,6 +1409,31 @@ footer img{
     #sign-part.active{
         opacity: 1;
         z-index: 98;
+    }
+    .input-login, .input-sign, .input-login-pas, .input-sign-pas{
+        width: 250px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 40%;
+    }
+    .p-login, .p-sign{
+        transform: translateY(20%) translateX(-50%);
+    }
+
+    .input-login:focus + .p-login,
+    .input-login:not(:placeholder-shown) + .p-login,
+    .input-login-pas:focus + .p-login,
+    .input-login-pas:not(:placeholder-shown) + .p-login,
+    .input-sign:focus + .p-sign,
+    .input-sign:not(:placeholder-shown) + .p-sign,
+    .input-sign-pas:focus + .p-sign,
+    .input-sign-pas:not(:placeholder-shown) + .p-sign {
+        transform: translateY(-60%);
+        transform: translateX(-70%);
+        text-shadow: 0 0 5px rgb(94, 23, 235, 0.5);
+        font-size: 12px;
+        color: var(--color2);
+
     }
     #welcome{
         width: 100%;
@@ -1365,5 +1456,35 @@ footer img{
         font-size: 0.75rem;
         height: 17.5px;
         bottom: 7.5%;
+    }
+
+    /* Página de "Sobre" NextBytes */
+
+    #sobre{
+        display: block;
+        width: 70vw;
+        padding-bottom: 200px;
+
+        left: 0;
+    }
+    #sobre p{
+        margin: 0 auto;
+        font-size: 1.3rem;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        top: 125px;
+        padding-bottom: 10px ;
+        text-align: start;
+        transform: translateX(-12.5%);        
+    }
+    #titulo-historia{
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+
+    #mencao-cidade{
+        margin-bottom: 200px;
     }
 }
