@@ -389,7 +389,7 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .grade-solo{
@@ -763,6 +763,7 @@ footer img{
     justify-content: center;
     overflow: hidden;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .produto-pag-mjs{
@@ -1214,6 +1215,7 @@ footer img{
         flex-direction: column;
         width: 90%;
         margin: 30px auto;
+        margin-bottom: 100px;
     }
     .grade-solo{
         width: 100%;
